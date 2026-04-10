@@ -1,0 +1,80 @@
+{
+  "name": "init/settings-website-builder",
+  "description": "Website Builder bridge for shared locale settings.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Init Modules",
+      "email": "dev@init-modules.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.init.red"
+    },
+    {
+      "type": "path",
+      "url": "../settings",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "../../website-builder-foundation/website-builder",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "require": {
+    "php": "^8.4",
+    "init/settings": "^1.0",
+    "init/website-builder": "^1.0",
+    "laravel/framework": "^12.0",
+    "spatie/laravel-package-tools": "^1.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Init\\SettingsWebsiteBuilder\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Init\\SettingsWebsiteBuilder\\RootServiceProvider"
+      ]
+    },
+    "merge-plugin": {
+      "include": [
+        "composer.local.json"
+      ],
+      "recurse": true,
+      "replace": true,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.0",
+    "pestphp/pest": "^4.2",
+    "pestphp/pest-plugin-laravel": "^4.0"
+  }
+}
