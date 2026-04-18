@@ -1,5 +1,6 @@
 {
   "name": "init/settings-website-builder",
+  "version": "dev-main",
   "description": "Website Builder bridge for shared locale settings.",
   "type": "library",
   "license": "MIT",
