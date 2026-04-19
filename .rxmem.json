@@ -1,0 +1,7 @@
+{
+  "project_slug": "settings-website-builder",
+  "name": "init/settings-website-builder",
+  "entry_type": "package",
+  "scope": "package:init/settings-website-builder",
+  "package_name": "init/settings-website-builder"
+}
