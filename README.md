@@ -1,27 +1,27 @@
-# init/settings-website-builder
+# init/settings-photon
 
-Website Builder bridge for shared locale settings.
+Photon bridge for shared locale settings.
 
 ## Назначение
 
-init/settings-website-builder — Laravel/Composer package; Website Builder integration or runtime layer; settings/locale layer. Пакет подключается как отдельный Composer-модуль и держит свою область ответственности внутри namespace <code>Init\SettingsWebsiteBuilder\</code>.
+init/settings-photon — Laravel/Composer package; Photon integration or runtime layer; settings/locale layer. Пакет подключается как отдельный Composer-модуль и держит свою область ответственности внутри namespace <code>Init\SettingsPhoton\</code>.
 
-- Этот пакет находится в слое Website Builder. Доменная логика должна оставаться в базовых пакетах, а здесь должны быть только адаптеры, настройки страниц, runtime-провайдеры или UI-kit для конструктора.
+- Этот пакет находится в слое Photon. Доменная логика должна оставаться в базовых пакетах, а здесь должны быть только адаптеры, настройки страниц, runtime-провайдеры или UI-kit для конструктора.
 
 ## Установка
 
 ~~~bash
-composer require init/settings-website-builder
+composer require init/settings-photon
 ~~~
 
 После установки проверьте регистрацию provider и конфигов в host-приложении.
 
 ## Интеграция
 
-Laravel service provider автообнаружения: <code>Init\SettingsWebsiteBuilder\RootServiceProvider</code>.
+Laravel service provider автообнаружения: <code>Init\SettingsPhoton\RootServiceProvider</code>.
 
 PSR-4 namespace:
-- <code>Init\SettingsWebsiteBuilder\</code>
+- <code>Init\SettingsPhoton\</code>
 
 Конфиги пакета не обнаружены.
 
@@ -30,7 +30,7 @@ PSR-4 namespace:
 ## Состав пакета
 
 - **Root**: <code>RootServiceProvider.php</code>
-- **Site**: <code>Site/Settings/LocalesWebsiteBuilderSiteSettingsExtension.php</code>
+- **Site**: <code>Site/Settings/LocalesPhotonSiteSettingsExtension.php</code>
 
 ## Основные точки расширения
 
@@ -46,7 +46,7 @@ PSR-4 namespace:
 
 Внутренние пакеты Init:
 - <code>init/settings ^1.0</code>
-- <code>init/website-builder ^1.0</code>
+- <code>init/photon ^1.0</code>
 
 Внешние runtime-зависимости:
 - <code>spatie/laravel-package-tools ^1.16</code>

@@ -1,13 +1,13 @@
 {
-	"name": "init/settings-website-builder",
+	"name": "init/settings-photon",
 	"version": "dev-main",
-	"description": "Website Builder bridge for shared locale settings.",
+	"description": "Photon bridge for shared locale settings.",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Init Modules",
-			"email": "dev@init-modules.com"
+			"name": "Init",
+			"email": "dev@init.com"
 		}
 	],
 	"repositories": [
@@ -24,7 +24,7 @@
 		},
 		{
 			"type": "path",
-			"url": "../../website-builder-foundation/website-builder",
+			"url": "../../photon-foundation/photon",
 			"options": {
 				"symlink": true
 			}
@@ -33,18 +33,18 @@
 	"require": {
 		"php": "^8.4",
 		"init/settings": "^1.0",
-		"init/website-builder": "^1.0",
+		"init/photon": "^1.0",
 		"laravel/framework": "^12.0",
 		"spatie/laravel-package-tools": "^1.16"
 	},
 	"autoload": {
 		"psr-4": {
-			"Init\\SettingsWebsiteBuilder\\": "src/"
+			"Init\\SettingsPhoton\\": "src/"
 		}
 	},
 	"extra": {
 		"laravel": {
-			"providers": ["Init\\SettingsWebsiteBuilder\\RootServiceProvider"]
+			"providers": ["Init\\SettingsPhoton\\RootServiceProvider"]
 		},
 		"merge-plugin": {
 			"include": ["composer.local.json"],

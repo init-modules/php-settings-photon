@@ -1,17 +1,17 @@
 <?php
 
-namespace Init\SettingsWebsiteBuilder\Site\Settings;
+namespace Init\SettingsPhoton\Site\Settings;
 
 use Init\Settings\Support\LocaleRegistry;
-use Init\WebsiteBuilder\Site\Contracts\WebsiteBuilderSiteSettingsExtension;
-use Init\WebsiteBuilder\Workspace\WebsiteBuilderWorkspace;
-use Init\WebsiteBuilder\Workspace\WebsiteBuilderWorkspaceStore;
+use Init\Photon\Site\Contracts\PhotonSiteSettingsExtension;
+use Init\Photon\Workspace\PhotonWorkspace;
+use Init\Photon\Workspace\PhotonWorkspaceStore;
 
-class LocalesWebsiteBuilderSiteSettingsExtension implements WebsiteBuilderSiteSettingsExtension
+class LocalesPhotonSiteSettingsExtension implements PhotonSiteSettingsExtension
 {
     public function __construct(
         protected LocaleRegistry $localeRegistry,
-        protected WebsiteBuilderWorkspaceStore $workspaceStore,
+        protected PhotonWorkspaceStore $workspaceStore,
     ) {
     }
 
@@ -20,7 +20,7 @@ class LocalesWebsiteBuilderSiteSettingsExtension implements WebsiteBuilderSiteSe
         return 'locales';
     }
 
-    public function resolve(WebsiteBuilderWorkspace $workspace): array
+    public function resolve(PhotonWorkspace $workspace): array
     {
         if (! $workspace->isDefault()) {
             return [
@@ -34,7 +34,7 @@ class LocalesWebsiteBuilderSiteSettingsExtension implements WebsiteBuilderSiteSe
         ];
     }
 
-    public function persist(WebsiteBuilderWorkspace $workspace, mixed $value): void
+    public function persist(PhotonWorkspace $workspace, mixed $value): void
     {
         if (! is_array($value)) {
             return;
